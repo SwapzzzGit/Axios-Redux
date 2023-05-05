@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     axios
       .get(
-        "http://api.weatherapi.com/v1/current.json?key=cff3503001bb4bf5a6595156230405&q=India&aqi=no"
+        `http://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API}q=India&aqi=no`
       )
       .then((data) => {
         setWeather(data.data);
